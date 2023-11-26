@@ -2,7 +2,11 @@
 
 package main
 
-import "strconv"
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 type storeType struct {
 	store []itemType
@@ -25,8 +29,18 @@ func createString() string {
 	return texts
 }
 
-func generate(texts string) {
-	g := []byte(texts)
+func generate() {
+	g := []byte(createString())
+	folderErr := os.MkdirAll("assets", os.ModePerm)
+	if folderErr != nil {
+		fmt.Println("cant create folder.")
+	}
+	fileErr := os.WriteFile("assets/store.json", g, 0644)
+	if fileErr != nil {
+		panic(fileErr)
+	}
+	fmt.Println("Successfully generated store.json")
+
 }
 
 var storeItems = []itemType{

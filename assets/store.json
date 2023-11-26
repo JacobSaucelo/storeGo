@@ -1,6 +1,13 @@
-[
-    {
-        "name": "Walkie-talkie",
-        "price": 12
-    },
+[{'name':Walkie-talkie,'price':12},
+{'name':Flashlight,'price':15},
+{'name':Shovel,'price':30},
+{'name':Lockpicker,'price':20},
+{'name':Pro-flashlight,'price':25},
+{'name':Stun grenade,'price':40},
+{'name':Boombox,'price':60},
+{'name':TZP-Inhalant,'price':120},
+{'name':Zap gun,'price':400},
+{'name':Jetpack,'price':700},
+{'name':Extension ladder,'price':60},
+{'name':Radar-booster,'price':50},
 ]
