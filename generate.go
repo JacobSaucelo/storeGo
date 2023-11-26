@@ -21,7 +21,7 @@ func createString() string {
 	texts := "["
 
 	for _, value := range storeItems {
-		texts += "{'name':" + value.name + ",'price':" + strconv.Itoa(int(value.price)) + "},\n"
+		texts += `{"name":"` + value.name + `","price":` + strconv.Itoa(int(value.price)) + "},\n"
 	}
 
 	texts += "]"
@@ -40,7 +40,6 @@ func generate() {
 		panic(fileErr)
 	}
 	fmt.Println("Successfully generated store.json")
-
 }
 
 var storeItems = []itemType{
