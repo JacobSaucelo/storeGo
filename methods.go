@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"os"
 )
 
@@ -19,7 +21,18 @@ func getStoreItems() {
 
 	defer jsonFile.Close()
 
-	fmt.Printf("file %T", jsonFile)
+	storeByteValue, _ := ioutil.ReadAll(jsonFile)
+
+	var itemsContainer []StoreItemType
+
+	json.Unmarshal(storeByteValue, &itemsContainer)
+
+	for _, item := range itemsContainer {
+		fmt.Println("*", item.Name, " // >", item.Price)
+	}
+
+	fmt.Println("items: ", itemsContainer)
+
 }
 
 func clearScreen() {
