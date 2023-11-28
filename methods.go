@@ -13,7 +13,7 @@ func mainMenu() {
 	fmt.Println("---------------------------------")
 }
 
-func GetStoreItems() []StoreItemType {
+func GetStoreItems() StoreType {
 	jsonFile, err := os.Open("./assets/store.json")
 	if err != nil {
 		fmt.Println(err)
@@ -23,16 +23,16 @@ func GetStoreItems() []StoreItemType {
 
 	storeByteValue, _ := ioutil.ReadAll(jsonFile)
 
-	var itemsContainer []StoreItemType
+	var itemsContainer StoreType
 
 	json.Unmarshal(storeByteValue, &itemsContainer)
 
 	return itemsContainer
 }
 
-func (items *[]StoreItemType) DisplayStore() {
-	for _, item := range items {
-		fmt.Printf("*%s // >%d", item.Name, item.Price)
+func (items *StoreType) DisplayStore() {
+	for _, item := range items.Products {
+		fmt.Printf("*%s // >%d \n", item.Name, item.Price)
 	}
 }
 
