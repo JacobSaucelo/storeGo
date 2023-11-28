@@ -39,7 +39,7 @@ func (items *StoreType) DisplayStore() {
 
 func (items *StoreCart) BuyItem(itemName string, store StoreType) bool {
 	for _, item := range store.Products {
-		if strings.EqualFold(item.Name, itemName) {
+		if strings.EqualFold("buy "+item.Name, itemName) {
 			items.Items = append(items.Items, item)
 			fmt.Printf("%s added to your cart.\n\n", item.Name)
 			return true
