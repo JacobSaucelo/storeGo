@@ -1,7 +1,7 @@
 package main
 
 type StoreType struct {
-	Store []StoreItemType `json:store`
+	Products []StoreItemType `json:store`
 }
 
 type StoreItemType struct {

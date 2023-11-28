@@ -1,14 +1,16 @@
-[
-  { "name": "walkie-talkie", "price": 12 },
-  { "name": "flashlight", "price": 15 },
-  { "name": "shovel", "price": 30 },
-  { "name": "lockpicker", "price": 20 },
-  { "name": "pro-flashlight", "price": 25 },
-  { "name": "stun grenade", "price": 40 },
-  { "name": "boombox", "price": 60 },
-  { "name": "tzp-inhalant", "price": 120 },
-  { "name": "zap gun", "price": 400 },
-  { "name": "jetpack", "price": 700 },
-  { "name": "extension ladder", "price": 60 },
-  { "name": "radar-booster", "price": 50 }
-]
+{
+  "Products": [
+    { "Name": "Walkie-talkie", "Price": 12 },
+    { "Name": "Flashlight", "Price": 15 },
+    { "Name": "Shovel", "Price": 30 },
+    { "Name": "Lockpicker", "Price": 20 },
+    { "Name": "Pro-flashlight", "Price": 25 },
+    { "Name": "Stun grenade", "Price": 40 },
+    { "Name": "Boombox", "Price": 60 },
+    { "Name": "TZP-Inhalant", "Price": 120 },
+    { "Name": "Zap gun", "Price": 400 },
+    { "Name": "Jetpack", "Price": 700 },
+    { "Name": "Extension ladder", "Price": 60 },
+    { "Name": "Radar-booster", "Price": 50 }
+  ]
+}

@@ -8,23 +8,14 @@ import (
 	"strconv"
 )
 
-type storeType struct {
-	store []itemType
-}
-
-type itemType struct {
-	name  string
-	price int16
-}
-
 func createString() string {
-	texts := "["
+	texts := `{"Products":[`
 
 	for _, value := range storeItems {
-		texts += `{"name":"` + value.name + `","price":` + strconv.Itoa(int(value.price)) + "},\n"
+		texts += `{"Name":"` + value.Name + `","Price":` + strconv.Itoa(int(value.Price)) + "},\n"
 	}
 
-	texts += "]"
+	texts += "]}"
 
 	return texts
 }
@@ -42,53 +33,53 @@ func generate() {
 	fmt.Println("Successfully generated store.json")
 }
 
-var storeItems = []itemType{
+var storeItems = []StoreItemType{
 	{
-		name:  "Walkie-talkie",
-		price: 12,
+		Name:  "Walkie-talkie",
+		Price: 12,
 	},
 	{
-		name:  "Flashlight",
-		price: 15,
+		Name:  "Flashlight",
+		Price: 15,
 	},
 	{
-		name:  "Shovel",
-		price: 30,
+		Name:  "Shovel",
+		Price: 30,
 	},
 	{
-		name:  "Lockpicker",
-		price: 20,
+		Name:  "Lockpicker",
+		Price: 20,
 	},
 	{
-		name:  "Pro-flashlight",
-		price: 25,
+		Name:  "Pro-flashlight",
+		Price: 25,
 	},
 	{
-		name:  "Stun grenade",
-		price: 40,
+		Name:  "Stun grenade",
+		Price: 40,
 	},
 	{
-		name:  "Boombox",
-		price: 60,
+		Name:  "Boombox",
+		Price: 60,
 	},
 	{
-		name:  "TZP-Inhalant",
-		price: 120,
+		Name:  "TZP-Inhalant",
+		Price: 120,
 	},
 	{
-		name:  "Zap gun",
-		price: 400,
+		Name:  "Zap gun",
+		Price: 400,
 	},
 	{
-		name:  "Jetpack",
-		price: 700,
+		Name:  "Jetpack",
+		Price: 700,
 	},
 	{
-		name:  "Extension ladder",
-		price: 60,
+		Name:  "Extension ladder",
+		Price: 60,
 	},
 	{
-		name:  "Radar-booster",
-		price: 50,
+		Name:  "Radar-booster",
+		Price: 50,
 	},
 }
