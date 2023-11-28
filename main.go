@@ -10,7 +10,7 @@ func main() {
 	store := GetStoreItems()
 	cart := StoreCart{}
 	store.DisplayStore()
-	MainMenuOptions()
+	// MainMenuOptions()
 
 	for {
 		var playerInput string
@@ -20,10 +20,12 @@ func main() {
 			break
 		}
 		if cart.BuyItem(playerInput, store) {
-
+			cart.ShowCartItems()
 		}
-
 	}
+
+	fmt.Println("You bought:")
+	cart.ShowCartItems()
 
 }
 
