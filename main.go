@@ -18,8 +18,6 @@ func main() {
 
 		playerInput, _ := reader.ReadString('\n')
 
-		fmt.Println("DEBUG:", strings.TrimSpace(playerInput))
-
 		if strings.ToLower(playerInput) == "exit" {
 			break
 		}
@@ -33,5 +31,4 @@ func main() {
 
 }
 
-// TODO  add concatenate shortcut "buy <item>"
 // go run main.go methods.go generate.go types.go
