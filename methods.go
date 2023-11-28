@@ -14,24 +14,6 @@ func mainMenu() {
 	fmt.Println("---------------------------------")
 }
 
-// func MainMenuOptions() {
-// 	reader := bufio.NewReader(os.Stdin)
-
-// 	menuPicked, _ := reader.ReadString('\n')
-
-// 	switch strings.TrimSpace(menuPicked) {
-// 	case "buy":
-// 		fmt.Println("Buy")
-// 	case "info":
-// 		fmt.Println("info")
-// 	case "exit":
-// 		fmt.Println("Exit")
-// 	default:
-// 		fmt.Println("Invalid input...")
-// 		MainMenuOptions()
-// 	}
-// }
-
 func GetStoreItems() StoreType {
 	jsonFile, err := os.Open("./assets/store.json")
 	if err != nil {
@@ -90,4 +72,3 @@ func clearScreen() {
 }
 
 // "You have requested to order string. Amount: byte. \n Total cost of items: >int32 \n Please CONFIRM or DENY."
-// - shouldve used map for more optimized

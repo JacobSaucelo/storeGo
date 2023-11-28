@@ -10,7 +10,6 @@ func main() {
 	store := GetStoreItems()
 	cart := StoreCart{}
 	store.DisplayStore()
-	// MainMenuOptions()
 
 	for {
 		var playerInput string
