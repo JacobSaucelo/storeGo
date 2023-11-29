@@ -18,14 +18,17 @@ func main() {
 
 		playerInput, _ := reader.ReadString('\n')
 
-		if strings.ToLower(playerInput) == "exit" {
+		if strings.ToLower(strings.TrimSpace(playerInput)) == "exit" {
 			break
 		}
 		if cart.BuyItem(strings.TrimSpace(playerInput), store) {
+			mainMenu()
+			store.DisplayStore()
 			cart.ShowCartItems()
 		}
 	}
 
+	clearScreen()
 	fmt.Println("You bought:")
 	cart.ShowCartItems()
 

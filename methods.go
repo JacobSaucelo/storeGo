@@ -33,8 +33,9 @@ func GetStoreItems() StoreType {
 
 func (items *StoreType) DisplayStore() {
 	for _, item := range items.Products {
-		fmt.Printf("*%s // >%d \n", item.Name, item.Price)
+		fmt.Printf("*%s // %d \n", item.Name, item.Price)
 	}
+	fmt.Println()
 }
 
 func (items *StoreCart) BuyItem(itemName string, store StoreType) bool {
@@ -45,14 +46,14 @@ func (items *StoreCart) BuyItem(itemName string, store StoreType) bool {
 			return true
 		}
 	}
-	fmt.Printf("'%s' not found.", itemName)
+	fmt.Printf("\n'%s' not found.\n", itemName)
 	return false
 }
 
 func (items *StoreCart) ShowCartItems() {
-	fmt.Println("On Cart: ")
+	fmt.Println("\nOn Cart: ")
 	for _, item := range items.Items {
-		fmt.Printf("%v - %d\n", item.Name, item.Price)
+		fmt.Printf("* %v - %d\n", item.Name, item.Price)
 	}
 	fmt.Printf("Total: %d \n", items.CalculateTotal())
 }
